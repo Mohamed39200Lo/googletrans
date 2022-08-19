@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+		 <meta charset="UTF-8">
+		 <meta http-equiv="X-UA-Compatible" content = "IE=edge">
+		 <meta name="viewport" content="width=device-width, intial-scale=1.0">
+		 <title>Document</title>
+		 <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
+<script defer src="https://pyscript.net/alpha/pyscript.js"></script>
+
+
+
+		 
+		 
+		
+		
+</head>
+<body>
+
+		 
+		<py-script> print('Now you can!') 
+		
+		
+		
+		
+import telebot
+#import requests
+#import schedule
+#import time
+from telebot import types
+#from telegram import *
+#from telegram.ext import * 
+from googletrans import Translator
+TA = ["**","* "]
+command1=["+translate to arabic"]
+command2=["+translate to english"]
+bot=telebot.TeleBot("5541021973:AAEx95D4bw8cUUDEZdeUbXzRprdViBmZWZk")
+Tol=["/start"]
+
+@bot.message_handler(commands=["english"])
+def isMSg (mk) :
+
+	return True
+@bot.message_handler(func=isMSg)
+def reply(message):
+	word = message.text
+	words = message.text.split()
+	
+	markup = types.ReplyKeyboardMarkup()
+	sss = types.KeyboardButton("+Translate To English")
+	ttt = types.KeyboardButton("+Translate to Arabic")
+	xxx = types.KeyboardButton("/start")
+	markup.row(xxx)
+	markup.row(ttt)
+	markup.row(sss)
+	if words[0]. lower () in Tol:
+		bot.send_message(message.chat.id,"hi", reply_markup=markup)
+		return
+	if word[0:21].lower() in command1:
+	
+		zz=bot.send_message(message.chat.id,"hello")
+		return
+	if word[0:21].lower() in command2:
+		bot.send_message(message.chat.id,"ho")
+		return
+	
+	if word[0:2].lower() in TA:
+				Trans=Translator ()
+				Translation =Trans.translate(word[3:],dest="en")
+				bot.reply_to(message, Translation.text)
+		
+	else:
+		
+		"""
+		#bot.register_next_step_handler(zz, tran )
+
+		def tran(message):
+			pp=message.text
+			xg=message.chat.id
+		"""	
+		Trans=Translator ()
+		Translation =Trans.translate(word,dest="ar")
+		bot.reply_to(message, Translation.text)
+	
+	
+	
+		
+print ("go")
+
+
+
+bot.polling()		
+		
+		
+		</py-script>|	 		 
+		
+
+				 
+				 				 				 
+				 		 
+</body>
+</html>		 
