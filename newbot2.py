@@ -13,7 +13,7 @@ import json
 
 
 
-
+"""
 # دوال حفظ واسترجاع البيانات من ملف JSON
 def save_data(data, filename="data.json"):
     with open(filename, "w", encoding="utf-8") as f:
@@ -25,6 +25,47 @@ def load_data(filename="data.json"):
             return json.load(f)
     except FileNotFoundError:
         return {}
+"""
+
+#بديل
+import requests  # لإضافة التفاعل مع GitHub Gist
+
+
+GITHUB_TOKEN = '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'  # ضع هنا الـ GitHub Token
+GIST_ID = '1050e1f10d7f5591f4f26ca53f2189e9'  
+
+
+
+# الدالة لتحميل البيانات من Gist
+def load_data():
+    headers = {
+        "Authorization": f"token {GITHUB_TOKEN}"
+    }
+    response = requests.get(f"https://api.github.com/gists/{GIST_ID}", headers=headers)
+    if response.status_code == 200:
+        files = response.json().get('files', {})
+        content = files.get('data22.json', {}).get('content', '{}')
+        return json.loads(content)
+    else:
+        return {}
+
+# الدالة لحفظ البيانات إلى Gist
+def save_data(data):
+    headers = {
+        "Authorization": f"token {GITHUB_TOKEN}"
+    }
+    payload = {
+        "files": {
+            "data22.json": {
+                "content": json.dumps(data, indent=4, default=str)
+            }
+        }
+    }
+    response = requests.patch(f"https://api.github.com/gists/{GIST_ID}", headers=headers, json=payload)
+    if response.status_code != 200:
+        print(f"Failed to update Gist: {response.status_code}, {response.text}")
+
+
 
 # تحميل البيانات من الملف
 data = load_data()
