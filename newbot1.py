@@ -23,7 +23,7 @@ token_part3 = "YvqKfUEBHXNaPh3ABRms"
 GITHUB_TOKEN = token_part1 + token_part2 + token_part3
 
 
-GIST_ID = os.getenv("GIST_ID")
+GIST_ID = "1050e1f10d7f5591f4f26ca53f2189e9"
 
 
 
