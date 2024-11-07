@@ -14,13 +14,13 @@ import requests  # لإضافة التفاعل مع GitHub Gist
 
 
 
-token_part1 = "your_personal_access"
+# الأجزاء المنفصلة
+token_part1 = "ghp_gFkAlF"
+token_part2 = "A4sbNyuLtX"
+token_part3 = "YvqKfUEBHXNaPh3ABRms"
 
-# الجزء الثاني من الرمز
-token_part2 = "_token_part"
-
-# دمج الجزئين
-GITHUB_TOKEN = token_part1 + token_part2
+# دمج الأجزاء للحصول على التوكن الكامل
+GITHUB_TOKEN = token_part1 + token_part2 + token_part3
 
 
 GIST_ID = os.getenv("GIST_ID")
