@@ -1,0 +1,17 @@
+{
+    "session": "AQDTTyAAfCcWfh7A8rAlC84nf1M6u4oHrP86Jf8qYZTpLSG4miR02RZj0kJmJHMX8ufkPLjVmUUdBlrwwlYY4t9lEfyy2jR6Vquxwx3pCwt9e8AmRnxjaHux8cXCeXaa8E1R4JYA2IPDAkcc5MTBwkBciPobVnAqBa7ZPBqvDdV5dVjgS9A07vO1lICYIQLLYkDtF5vgEq6EI90ZILthvhwAKXdiiYTL6m9AFfCYY-_AE9IF61_VWvUfY2MWWG_iOQccEcR-OMCUQfpWkB6zWgK_-mzaubugxpnVB3Ickwrj0h7yiCUGl4WkJyzIp4SxoGkLVnIoMNPF-yq4pkz4U0GyTGtZfgAAAAByPVxMAA",
+    "source_destination_mapping": {
+        "-1002141126274": [
+            -1002108517656
+        ],
+        "-1002108517656": [
+            -1002141126274
+        ]
+    },
+    "lines_to_remove_starting_with": [
+        "خحخ"
+    ],
+    "line_replacements": {
+        "مم": "كك"
+    }
+}
