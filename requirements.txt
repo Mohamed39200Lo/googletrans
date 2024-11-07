@@ -4,3 +4,4 @@ gunicorn ==23.0.0
 pyro-listener==2023.9.19
 pyrogram==2.0.106
 pyrogram-repl===2.0.106
+python-dotenv
