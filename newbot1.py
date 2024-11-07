@@ -2,7 +2,6 @@ from pyrogram import Client, filters
 #import subprocess
 import json
 import re
-from replit import db
 #db.clear()
 api_id = 23068290
 api_hash = 'e38697ea4202276cbaa91d20b99af864'
