@@ -8,13 +8,36 @@ api_hash = 'e38697ea4202276cbaa91d20b99af864'
 ###
 
 #🌄
+
+import requests  # لإضافة التفاعل مع GitHub Gist
+
+
+GITHUB_TOKEN = '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'  # ضع هنا الـ GitHub Token
+GIST_ID = '1050e1f10d7f5591f4f26ca53f2189e9'  
+
+
+
+# الدالة لتحميل البيانات من Gist
+def load_data():
+    headers = {
+        "Authorization": f"token {GITHUB_TOKEN}"
+    }
+    response = requests.get(f"https://api.github.com/gists/{GIST_ID}", headers=headers)
+    if response.status_code == 200:
+        files = response.json().get('files', {})
+        content = files.get('data22.json', {}).get('content', '{}')
+        return json.loads(content)
+    else:
+        return {}
+
+"""
 def load_data(filename="data.json"):
     try:
         with open(filename, "r", encoding="utf-8") as f:
             return json.load(f)
     except FileNotFoundError:
         return {}
-
+"""
 # تحميل البيانات من الملف
 data = load_data()
 source_destination_mapping1 = data.get("source_destination_mapping", {})
