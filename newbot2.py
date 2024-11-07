@@ -30,8 +30,8 @@ def load_data(filename="data.json"):
 #بديل
 import requests  # لإضافة التفاعل مع GitHub Gist
 
-
-GITHUB_TOKEN = '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'  # ضع هنا الـ GitHub Token
+Momo="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"
+GITHUB_TOKEN = Momo  # ضع هنا الـ GitHub Token
 GIST_ID = '1050e1f10d7f5591f4f26ca53f2189e9'  
 
 
