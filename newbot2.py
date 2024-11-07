@@ -30,9 +30,16 @@ def load_data(filename="data.json"):
 #بديل
 import requests  # لإضافة التفاعل مع GitHub Gist
 
-Momo="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"
-GITHUB_TOKEN = Momo  # ضع هنا الـ GitHub Token
-GIST_ID = '1050e1f10d7f5591f4f26ca53f2189e9'  
+from dotenv import load_dotenv
+import os
+
+# تحميل المتغيرات من .env
+load_dotenv()
+
+# استدعاء الرموز السرية
+GITHUB_TOKEN = os.getenv("GITHUB_TOKEN")
+GIST_ID = os.getenv("GIST_ID")
+
 
 
 
