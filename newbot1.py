@@ -12,8 +12,15 @@ api_hash = 'e38697ea4202276cbaa91d20b99af864'
 import requests  # لإضافة التفاعل مع GitHub Gist
 
 
-GITHUB_TOKEN = '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'  # ضع هنا الـ GitHub Token
-GIST_ID = '1050e1f10d7f5591f4f26ca53f2189e9'  
+from dotenv import load_dotenv
+import os
+
+# تحميل المتغيرات من .env
+load_dotenv()
+
+# استدعاء الرموز السرية
+GITHUB_TOKEN = os.getenv("GITHUB_TOKEN")
+GIST_ID = os.getenv("GIST_ID")
 
 
 
