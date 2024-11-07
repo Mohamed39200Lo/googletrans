@@ -1,1 +1,6 @@
 pyTelegramBotAPI ==4.16.1
+flask ==3.0.3
+gunicorn ==23.0.0
+pyro-listener==2023.9.19
+pyrogram==2.0.106
+pyrogram-repl===2.0.106
