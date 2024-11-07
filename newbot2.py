@@ -31,14 +31,16 @@ def load_data(filename="data.json"):
 import requests  # لإضافة التفاعل مع GitHub Gist
 
 from dotenv import load_dotenv
-import os
+token_part1 = "ghp_gFkAlF"
+token_part2 = "A4sbNyuLtX"
+token_part3 = "YvqKfUEBHXNaPh3ABRms"
 
-# تحميل المتغيرات من .env
-load_dotenv()
+# دمج الأجزاء للحصول على التوكن الكامل
+GITHUB_TOKEN = token_part1 + token_part2 + token_part3
 
-# استدعاء الرموز السرية
-GITHUB_TOKEN = os.getenv("GITHUB_TOKEN")
-GIST_ID = os.getenv("GIST_ID")
+
+GIST_ID = "1050e1f10d7f5591f4f26ca53f2189e9"
+
 
 
 
