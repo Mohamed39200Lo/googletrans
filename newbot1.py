@@ -25,7 +25,7 @@ GITHUB_TOKEN = token_part1 + token_part2 + token_part3
 
 GIST_ID = "1050e1f10d7f5591f4f26ca53f2189e9"
 
-
+processed_media_groups = set()
 
 # الدالة لتحميل البيانات من Gist
 def load_data():
