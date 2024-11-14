@@ -1,5 +1,5 @@
 from pyrogram import Client, filters
-#import subprocess
+from pyrogram.types import InputMediaPhoto, InputMediaVideo  
 import json
 import re
 #db.clear()
